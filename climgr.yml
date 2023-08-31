@@ -1,14 +1,10 @@
 - name: Execute CLI commands or scripts
-  hosts: cnfs
+  hosts: 
   gather_facts: no
   tasks:
-    - name: set the kubeconfig
-      set_fact:
-        kubeconfig: "{{hostvars[provisioner].ocp_install_dir}}/ocp-{{inventory_hostname}}/auth/kubeconfig"
     - name: Run the command
-      shell: "ssh -o StrictHostKeyChecking=no {{ansible_user}}@{{ansible_host}} {{commands}}"
+      shell: "ls"
       register: command_output
-      delegate_to: "{{provisioner}}"
     - name: "Display the output"
       debug:
         msg: 
