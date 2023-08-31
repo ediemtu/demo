@@ -1,5 +1,5 @@
 - name: Execute CLI commands or scripts
-  hosts: 
+  hosts: pi
   gather_facts: no
   tasks:
     - name: Run the command
