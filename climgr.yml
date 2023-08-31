@@ -2,10 +2,9 @@
   hosts: pi
   gather_facts: no
   tasks:
-    - name: Check systeminfo
+    - name: Check system info
       shell: "lsb_release -a"
       register: command_output
     - name: "Display the output"
       debug:
         msg:  "{{ command_output.stdout_lines"
-      when: (command_output.rc == 0)
