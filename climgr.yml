@@ -1,5 +1,5 @@
 - name: Execute CLI commands or scripts
-  hosts: pi
+  hosts: all
   gather_facts: no
   tasks:
     - name: Check system info
