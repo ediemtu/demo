@@ -1,5 +1,5 @@
 - name: Execute CLI commands or scripts
-  hosts: all
+  hosts: pi
   gather_facts: no
   tasks:
     - name: Check system info
@@ -7,4 +7,4 @@
       register: command_output
     - name: "Display the output"
       debug:
-        msg:  "{{ command_output.stdout_lines"
+        msg:  "{{ command_output.stdout_lines }}"
