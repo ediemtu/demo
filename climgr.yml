@@ -3,7 +3,7 @@
   gather_facts: no
   tasks:
     - name: Check system info
-      shell: "lsb_release -a"
+      shell: "ls"
       register: command_output
     - name: "Display the output"
       debug:
