@@ -3,8 +3,7 @@
   gather_facts: no
   tasks:
     - name: Check system info
-      shell: 
-         echo "This will go in log hile" >/tmp/lo_file.txt
+      shell: "ls -lh"
       register: command_output
     - name: "Display the output"
       debug:
